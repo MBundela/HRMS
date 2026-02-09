@@ -1,7 +1,7 @@
 import express from "express";
 import Attendance from "../models/Attendance.js";
 
-const router = express.Router();
+ export const router = express.Router();
 
 
 router.post("/", async (req, res) => {
@@ -18,5 +18,3 @@ router.get("/:empId", async (req, res) => {
   const data = await Attendance.find({ empId: req.params.empId });
   res.json(data);
 });
-
-export default router;
