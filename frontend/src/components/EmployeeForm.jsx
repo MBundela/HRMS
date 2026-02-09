@@ -12,7 +12,7 @@ function EmployeeForm() {
   );
 
   const submit = async () => {
-    await fetch(`${API}`, {
+    await fetch(`${API}/employees`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
