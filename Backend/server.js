@@ -22,6 +22,10 @@ app.get("/", (req, res) => {
   res.send("HRMS Backend Running Successfully 🚀");
 });
 
+app.get("/api/employees", (req, res) => {
+  res.json({ test: "Employees route working" });
+});
+
 app.use("/api/employees", employeeRoutes);
 app.use("/api/attendance", attendanceRoutes);
 
