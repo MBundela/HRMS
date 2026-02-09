@@ -15,7 +15,7 @@ app.use(cors({
     "http://localhost:5173"
   ],
   methods: ["GET","POST","PUT","DELETE"],
-  allowedHeaders: ["Content-Type"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 
@@ -26,7 +26,7 @@ app.use(express.json());
 connectDB();
 
 app.get("/", (req, res) => {
-  res.send("HRMS Backend Running Successfully 🚀");
+  res.send("HRMS Backend Running Successfully");
 });
 
 app.use("/api/employees", employeeRoutes);

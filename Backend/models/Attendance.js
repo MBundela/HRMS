@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const attendanceSchema = new mongoose.Schema({
   empId: String,
-  date: String,
+  date: { type: Date, default: Date.now },
   status: { type: String, enum: ["Present", "Absent"] }
 });
 

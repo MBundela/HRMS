@@ -9,13 +9,12 @@ router.post("/", async (req, res) => {
   if (!empId || !date || !status)
     return res.status(400).json({ msg: "All fields required" });
 
-  const record = await Attendance.create(req.body);
+  const record =await Attendance.create(req.body);
   res.status(201).json(record);
 });
 
-
 router.get("/:empId", async (req, res) => {
-  const data = await Attendance.find({ empId: req.params.empId });
+  const data =await Attendance.find({ empId: req.params.empId });
   res.json(data);
 });
 

@@ -1,7 +1,7 @@
 import express from "express";
 import Employee from "../models/Employee.js";
 
-export const router = express.Router();
+const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
@@ -34,3 +34,5 @@ router.delete("/:id", async (req, res) => {
   await Employee.findByIdAndDelete(req.params.id);
   res.json({ msg: "Deleted" });
 });
+
+export default router;
