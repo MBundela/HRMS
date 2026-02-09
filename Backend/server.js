@@ -18,9 +18,9 @@ app.use(express.json());
 
 connectDB();
 
-app.get("/", (req, res) => {
-  res.send("HRMS Backend Running Successfully 🚀");
-});
+// app.get("/", (req, res) => {
+//   res.send("HRMS Backend Running Successfully 🚀");
+// });
 
 app.get("/api/employees", (req, res) => {
   res.json({ test: "Employees route working" });
