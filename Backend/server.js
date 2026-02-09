@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "*",  
+  origin: "https://employee-xz5m.vercel.app",  
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
