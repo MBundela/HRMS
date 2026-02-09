@@ -6,7 +6,7 @@ function AttendanceList() {
   const [data,setData]=useState([]);
 
   const load = async ()=>{
-    const res = await fetch(`${API}/attendance/${empId}`);
+    const res =await fetch(`${API}/attendance/${empId}`);
     setData(await res.json());
   };
 
