@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 export const connectDB = async () => {
-  await mongoose.connect("mongodb://127.0.0.1:27017/hrms-lite");
-  console.log("MongoDB Connected");
+  await mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
 };
