@@ -1,2 +1,2 @@
-export const API = "https://hrms-backend.onrender.com/api";
+export const API = "https://hrms-backend.onrender.com";
 
