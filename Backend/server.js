@@ -19,7 +19,8 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("*", cors());
+app.options("https://employee-xz5m.vercel.app", cors());
+
 app.use(express.json());
 
 connectDB();
