@@ -13,8 +13,8 @@ function EmployeeForm() {
 
   const submit =async () => {
     await fetch(`${API}/employees`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: "Post",
+      headers: { "Content-Type": "Application/Json" },
       body: JSON.stringify(form)
     });
     alert("Employee Added");
