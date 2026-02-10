@@ -3,7 +3,7 @@ import Employee from "../models/Employee.js";
 
 const router = express.Router();
 
-router.post("/", async (req, res) => {
+router.post("/",async (req, res)=>{
   try {
     const { empId, name, email, department } = req.body;
 

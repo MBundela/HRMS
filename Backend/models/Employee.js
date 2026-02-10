@@ -7,5 +7,4 @@ const employeeSchema = new mongoose.Schema({
   department: { type: String, required: true }
 });
 
-console.log(employeeSchema)
 export default mongoose.model("Employee", employeeSchema);
