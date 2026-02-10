@@ -12,28 +12,13 @@ function EmployeeForm() {
   );
 
   const submit = async () => {
-  try {
-    const response = await fetch(`${API}/employees`, {
+    await fetch(`${API}/employees`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
     });
-
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      alert("Server error: " + (errorData.message || response.statusText));
-      return;
-    }
-
-    const data = await response.json();
-    alert("Employee added successfully!");
-    setForm({ empId: "", name: "", email: "", department: "" });
-  } catch (err) {
-    console.error("Network error:", err);
-    alert("Failed to connect to server. Check backend URL or server status.");
-  }
-};
-
+    alert("Employee Added");
+  };
 
   return (
     <div className="card">
