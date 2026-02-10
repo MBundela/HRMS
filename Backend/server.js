@@ -22,12 +22,11 @@ app.use(cors({
 app.options("*", cors());
 app.use(express.json());
 
-
 connectDB();
 
-// app.get("/", (req, res) => {
-//   res.send("HRMS Backend Running Successfully");
-// });
+app.get("/", (req, res) => {
+  res.send("HRMS Backend Running Successfully");
+});
 
 app.use("/api/employees", employeeRoutes);
 app.use("/api/attendance", attendanceRoutes);
