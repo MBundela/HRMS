@@ -19,7 +19,7 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("https://employee-xz5m.vercel.app", cors());
+app.options("*", cors());
 
 app.use(express.json());
 
