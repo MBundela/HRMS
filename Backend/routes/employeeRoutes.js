@@ -10,14 +10,14 @@ router.post("/", async (req, res) => {
     if (!empId || !name || !email || !department)
       return res.status(400).json({ msg: "All fields required" });
 
-    const exists = await Employee.findOne({ empId });
+    const exists =await Employee.findOne({ empId });
     if (exists) return res.status(409).json({ msg: "Employee ID already exists" });
 
     const emailRegex = /\S+@\S+\.\S+/;
     if (!emailRegex.test(email))
       return res.status(400).json({ msg: "Invalid email format" });
 
-    const emp = await Employee.create(req.body);
+    const emp =await Employee.create(req.body);
     res.status(201).json(emp);
   } catch (err) {
     res.status(500).json({ msg: err.message });
@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 
 
 router.get("/", async (req, res) => {
-  const data = await Employee.find();
+  const data =await Employee.find();
   res.json(data);
 });
 
